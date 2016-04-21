@@ -1,3 +1,19 @@
+.reveal {
+    font-size: 70px;
+}
+.reveal h1 {
+    text-transform: none;
+}
+
+.dual > div {
+    display: flex;
+    align-items: flex-start;
+}
+
+.dual div {
+    font-size: 50px;
+}
+
 .chart rect {
     fill: #63b6db;
 }

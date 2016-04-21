@@ -8,29 +8,98 @@
 		<link rel="stylesheet" href="css/my.css" id="theme">
 </head>
 <body>
-		<div class="reveal">
-			<div class="slides">
-				<section id="graph1">
-					<h2>
-            <span class="fragment current-visible abs">Slide1</span>
-            <span class="fragment current-visible abs">Slide222</span>
-          </h2>
-					<p>This example contains the bare minimum includes and markup required to run a reveal.js presentation.</p>
-					<svg class="chart"></svg>
-          <span class="fragment"></p>
-				</section>
+  <div class="reveal">
+    <div class="slides">
 
-			</div>
-		</div>
+<!--**********************************************************-->
 
-		<script src="js/reveal.js"></script>
-		<script>
-			Reveal.initialize();
-		</script>
+<section class="first-slide">
+  <h1>Rust + Python</h1>
+  <p class="fragment">The Perfect Combination</p>
+</section>
 
-		<script src="js/d3.min.js"></script>
-		<script src="js/reveal-to-d3.js"></script>
-		<script src="js/reveal-to-d3-config.js"></script>
-		<script src="js/my.js"></script>
+<section>
+  <h1>Python</h1>
+  <ul>
+    <li class="fragment">Flexibility</li>
+    <li class="fragment">Dynamic Typing</li>
+    <li class="fragment">Time To Market</li>
+  </ul>
+</section>
+
+<section>
+  <h1>Rust</h1>
+  <ul>
+    <li class="fragment">Full Control</li>
+    <li class="fragment">Error Handling</li>
+    <li class="fragment">Threading</li>
+  </ul>
+</section>
+
+<section>
+  <img src="stator_scheme.svg">
+</section>
+
+<section class="dual">
+  <div>
+    <img src="stator_scheme.svg" width="400px">
+    <div>
+      <h1>Rust</h1>
+      <ul>
+        <li class="fragment">Parse Requests</li>
+        <li class="fragment">Reconnecting</li>
+        <li class="fragment">Queueing</li>
+        <li class="fragment">Service Discovery</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="dual">
+  <div>
+    <img src="stator_scheme.svg" width="400px">
+    <div>
+      <h1>Python</h1>
+      <ul>
+        <li class="fragment">Routing</li>
+        <li class="fragment">Data Validation</li>
+        <li class="fragment">Business Logic</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <ul>
+    <li>Performance</li>
+    <li>Latency</li>
+    <li>Asynchronous I/O</li>
+  </ul>
+</section>
+
+<section id="graph1">
+  <h2>
+    <span class="fragment current-visible abs">Slide1</span>
+    <span class="fragment current-visible abs">Slide222</span>
+  </h2>
+  <p>This example contains the bare minimum includes and markup required to run a reveal.js presentation.</p>
+  <svg class="chart"></svg>
+  <span class="fragment"></p>
+</section>
+
+<!--**********************************************************-->
+
+    </div>
+  </div>
+
+  <script src="js/reveal.js"></script>
+  <script>
+    Reveal.initialize();
+  </script>
+
+  <script src="js/d3.min.js"></script>
+  <script src="js/reveal-to-d3.js"></script>
+  <script src="js/reveal-to-d3-config.js"></script>
+  <script src="js/my.js"></script>
 </body>
 </html>
