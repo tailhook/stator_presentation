@@ -1,0 +1,23 @@
+.chart rect {
+    fill: #63b6db;
+}
+
+.chart text {
+    fill: white;
+    font: 50px sans-serif;
+    text-anchor: end;
+}
+
+text {
+    font: 50px sans-serif;
+}
+.abs {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+}
+h2 {
+    position: relative;
+    min-height: 50px;
+}
