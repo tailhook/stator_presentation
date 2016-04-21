@@ -6,24 +6,25 @@ var pt = pt || {};
 
 pt.slideIdToFunctions = {
   'graph1': {
-    'init': function() {
+    '0': function() {
       'use strict';
+      var data = {
+        stator: 36482.09,
+        uwsgi: 43833.15,
+        tornado: 2901.44,
+      };
       render(data);
-  console.log("IN")
     },
-    '-1': function() {
+    1: function() {
       'use strict';
-      var data = [44, 28, 15, 16, 23, 5];
-  console.log("SHIT")
+      var data = {
+        stator: 36482.09,
+        "stator-asyncio": 30566.94,
+        uwsgi: 43833.15,
+        "uwsgi-gevent": 15520.09,
+        tornado: 2901.44,
+      };
       render(data);
-      //d3.select('.chart').selectAll('g').data(data)
-    },
-    0: function() {
-      'use strict';
-  console.log("zer")
-      var data = [10, 17, 15, 16, 23, 5];
-      render(data);
-      //d3.select('.chart').selectAll('g').data(data)
     }
   },
 };
