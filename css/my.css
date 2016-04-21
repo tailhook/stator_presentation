@@ -18,6 +18,8 @@
     fill: blue;
 }
 #chart1 rect.stator-asyncio,
+#chart1 rect.stator-redis,
+#chart1 rect.stator-aio-redis,
 #chart1 rect.tornado,
 #chart1 rect.uwsgi-gevent {
     fill: green;

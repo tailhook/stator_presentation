@@ -1,6 +1,8 @@
 var ICONS = {
     stator: 'rust.svg',
     "stator-asyncio": 'rust.svg',
+    "stator-redis": 'rust.svg',
+    "stator-aio-redis": 'python.svg',
     uwsgi: 'uwsgi.png',
     "uwsgi-gevent": 'uwsgi.png',
     tornado: 'tornado.jpg',
