@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<title>Reveal.js with D3 JS</title>
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<style>
+			.chart rect {
+			  fill: #63b6db;
+			}
+
+			.chart text {
+			  fill: white;
+			  font: 50px sans-serif;
+			  text-anchor: end;
+			}
+
+			text {
+			  font: 50px sans-serif;
+			}
+      .abs {
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+      }
+      h2 {
+        position: relative;
+        min-height: 50px;
+      }
+		</style>
+</head>
+<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="graph1">
+					<h2>
+            <span class="fragment current-visible abs">Slide1</span>
+            <span class="fragment current-visible abs">Slide222</span>
+          </h2>
+					<p>This example contains the bare minimum includes and markup required to run a reveal.js presentation.</p>
+					<svg class="chart"></svg>
+          <span class="fragment"></p>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.min.js"></script>
+		<script>
+			Reveal.initialize();
+		</script>
+
+		<script src="js/d3.min.js"></script>
+		<script src="js/reveal-to-d3.js"></script>
+		<script src="js/reveal-to-d3-config.js"></script>
+		<script type="text/javascript">
+    function render(data) {
+      console.log("REDNER", data)
+        var width = 420,
+            barHeight = 50;
+
+        var x = d3.scale.linear()
+            .domain([0, d3.max(data)])
+            .range([0, width]);
+
+        var chart = d3.select(".chart")
+            .attr("width", width)
+            .attr("height", barHeight * data.length);
+
+        var g = chart.selectAll("g").data(data)
+        var bar = g.enter().append("g")
+            .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
+
+        bar.append("rect")
+            .attr("width", x)
+            .attr("height", barHeight - 1);
+        g
+          .select('rect')
+          .transition()
+          .duration(1000)
+          .attr("width", x)
+
+        bar.append("text")
+            .attr("x", function(d) { return x(d) - 3; })
+            .attr("y", barHeight / 2)
+            .attr("dy", ".35em")
+            .text(function(d) { return d; });
+        g
+          .select('text')
+          .transition()
+          .duration(1000)
+          .attr("x", function(d) { return x(d) - 3; })
+          .text(function(d) { return d; })
+    }
+      var data = [44, 28, 15, 16, 23, 5];
+      render(data);
+
+		</script>
+</body>
+</html>
