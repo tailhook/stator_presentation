@@ -4,6 +4,9 @@
 .reveal h1 {
     text-transform: none;
 }
+.smaller h1 {
+    font-size: 120px;
+}
 
 .dual > div {
     display: flex;
